@@ -1,0 +1,51 @@
+#root {
+    display: flex;
+    flex-direction: column;
+     
+    width: 1000px;
+
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+ 
+
+.material-icons{
+    font-size: 55px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.switcher__box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_model_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    object-fit: cover;
+}
+
+ .model_list {
+    width: 300px;
+    height: 300px;
+ }
+
+ 
+
+.footer_card{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_list_box{
+    display: flex;
+    flex-direction: column;
+    
+
+}
