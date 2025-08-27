@@ -1,4 +1,4 @@
-import Card from "../Card/Card"
+import CardList from "../CardList/CardList"
 import "./List.css";
 
 
@@ -37,7 +37,7 @@ export default function List(){
 
     return(
         <div className="card_list_box">{products.map((el) => (<div className="list" key={el.img}>
-            <Card pic={"pic_list"} name={el.name} price={el.price} color={el.color} img={el.img}/>
+            <CardList pic={"pic_list"} name={el.name} price={el.price} color={el.color} img={el.img}/>
         </div>)
 
         )}</div>
