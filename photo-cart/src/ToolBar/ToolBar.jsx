@@ -3,25 +3,27 @@ import PicList from "../PicList/PicList.jsx";
 import { useState } from 'react';
 import "./ToolBar.css";
 
-export  default function ToolBar(){
-    const [filter,setFilter] = useState("all");
-    
- function getButtonName(event){
-    setFilter(event.name);
-    
-}
+export default function ToolBar() {
+    const [filter, setFilter] = useState("All");
 
-return (
-    <>
-        <div className="button__box"><Button name={"All"} getButtonName={getButtonName}/>
-        <Button name={"Websites"} getButtonName={getButtonName}/>
-        <Button name={"Flayers"} getButtonName={getButtonName}/>
-        <Button name={"Business Cards"} getButtonName={getButtonName}/>
-        </div>
-        <PicList filter={filter}/>
-    </>
-   
-)
+    function getButtonName(event) {
+        setFilter(event.name);
+
+    }
+
+    const filterArr = ["All", "Websites", "Flayers", "Business Cards"];
+
+    const buttonArr = filterArr.map((el, index) => <Button key={index} name={el} getButtonName={getButtonName} />);
+
+    return (
+        <>
+            <div className="button__box">
+                {buttonArr};
+            </div>
+            <PicList filter={filter} />
+        </>
+
+    )
 
 
 }
