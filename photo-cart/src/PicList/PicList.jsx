@@ -1,5 +1,5 @@
 import Card from "../Card/Card.jsx";
-import picArr from "./PicArr.jsx";
+import picArr from "./picArr.js";
 
 export default function PicList({ filter }) {
     
